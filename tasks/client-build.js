@@ -31,7 +31,7 @@ module.exports = function(callback) {
       if (firstRun) {
         firstRun = false;
       } else {
-        util.log(`webpack:build ${elapsedTime}s`);
+        util.log('webpack:build ${elapsedTime}s');
         callback();
       }
     };
