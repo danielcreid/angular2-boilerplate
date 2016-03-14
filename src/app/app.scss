@@ -1,0 +1,7 @@
+@import './src/styles/colors.scss';
+
+h1 { color: get-color(mint); }
+
+h1:after {
+  content: url(images/arrow-circle-down.svg);
+}
