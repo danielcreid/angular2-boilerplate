@@ -6,7 +6,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 
-module.exports = function() {
+module.exports = function(callback) {
   return function() {
     return gulp.src(config.styles)
       .pipe(sass.sync({
@@ -16,8 +16,11 @@ module.exports = function() {
           './src/styles',
           './node_modules/foundation-sites/scss'
         ]
-      }))
+      }).on('error', sass.logError))
       .pipe(autoprefixer(config.autoprefixer))
-      .pipe(gulp.dest(config.destination));
+      .pipe(gulp.dest(config.destination))
+      .on('finish', function() {
+        if (callback) { callback(); }
+      });
   };
 };

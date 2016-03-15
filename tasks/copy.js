@@ -4,9 +4,12 @@ var config = require('./config').client;
 
 var gulp = require('gulp');
 
-module.exports = function() {
+module.exports = function(callback) {
   return function() {
-    return gulp.src(config.source)
-      .pipe(gulp.dest(config.destination));
+    gulp.src(config.source)
+      .pipe(gulp.dest(config.destination))
+      .on('finish', function() {
+        if (callback) { callback(); }
+      });
   };
 };

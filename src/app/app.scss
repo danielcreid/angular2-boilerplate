@@ -1,6 +1,6 @@
-@import './src/styles/colors.scss';
+@import 'colors.scss';
 
-h1 { color: get-color(mint); }
+h1 { color: get-color(red); }
 
 h1:after {
   content: url(images/arrow-circle-down.svg);

@@ -8,7 +8,7 @@ var styles = require('./app.scss');
 
 @Component({
   selector: 'app',
-  templateUrl: template,
-  styleUrls: [styles]
+  templateUrl: '<h1>It works!</h1>'//template,
+  //styleUrls: [styles]
 })
 export class App {}

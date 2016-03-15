@@ -11,18 +11,11 @@ var tsProject = ts.createProject('tsconfig.json');
 module.exports = function(callback) {
   return function() {
     var tsResult = tsProject.src()
-      .pipe(ts(tsProject, {
-        out: 'boot.js'
-      }));
+      .pipe(ts(tsProject))
+      .on('finish', function() {
+        if (callback) { callback(); }
+      });
 
     return tsResult.js.pipe(gulp.dest(config.destination));
-
-    //return gulp.src(config.typescript)
-    //  //.pipe(watch(config.typescript, { verbose: true }))
-    //  //  .on('change', callback)
-    //  .pipe(ts({
-    //    out: 'boot.js'
-    //  }))
-    //  .pipe(gulp.dest(config.destination));
   };
 };
