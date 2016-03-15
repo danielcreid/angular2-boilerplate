@@ -4,8 +4,7 @@ var config = require('./config').client;
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
+var autoprefixer = require('gulp-autoprefixer');
 var watch = require('gulp-watch');
 var browserSync = require('browser-sync').create();
 var plumber = require('gulp-plumber');
@@ -24,9 +23,7 @@ module.exports = function(callback) {
           './node_modules/foundation-sites/scss'
         ]
       }))
-      .pipe(postcss([
-        autoprefixer(config.autoprefixer)
-      ]))
+      .pipe(autoprefixer(config.autoprefixer))
       .pipe(gulp.dest(config.destination))
       .pipe(browserSync.stream());
 
@@ -39,9 +36,7 @@ module.exports = function(callback) {
           './node_modules/foundation-sites/scss'
         ]
       }))
-      .pipe(postcss([
-        autoprefixer(config.autoprefixer)
-      ]))
+      .pipe(autoprefixer(config.autoprefixer))
       .pipe(gulp.dest(config.destination));
   };
 };

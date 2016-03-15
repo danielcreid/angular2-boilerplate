@@ -8,7 +8,8 @@ module.exports = {
       '!src/app/**',
       '!src/styles/**'
     ],
-    styles: 'src/styles/**/*.scss',
+    styles: 'src/**/*.scss',
+    typescript: 'src/**/*.ts',
     destination: 'dist',
     autoprefixer: {
       browsers: ['last 2 versions']
