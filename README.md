@@ -1,4 +1,4 @@
-# angular2-gulp-webpack
+# Angular2 Boilerplate
 Boilerplate for Angular 2 application using Gulp + TypeScript + Sass
 
 ## Getting Started
