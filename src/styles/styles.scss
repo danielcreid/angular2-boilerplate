@@ -11,45 +11,6 @@
 
 @include foundation-everything($flex: true);
 
-//app {
-//  display: flex;
-//  flex-direction: column;
-//  height: 100%; // min-height breaks IE 10/11, but content overflows as expected
-//}
-//
-//.app-body {
-//  display: flex;
-//  flex: 1 0 auto;
-//}
-//
-//.app-nav {
-//  display: block;
-//  flex-shrink: 0;
-//  width: 200px;
-//
-//  border-right: 1px solid get-color(gray, 100)
-//}
-//
-//.app-content-wrap {
-//  display: flex;
-//  flex-direction: column;
-//  flex-basis: 100%;
-//}
-//
-//.app-content {
-//    flex: 1 0 auto;
-//    padding: 20px;
-//}
-//
-//login {
-//  display: block;
-//  margin: 6em auto 0 auto;
-//  width: 300px;
-//}
-
-
-
 body {
-  //display: flex;
-  background-color: get-color(mint, 300);
+  background-color: get-color(magenta, 100);
 }

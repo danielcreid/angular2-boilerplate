@@ -18,6 +18,7 @@ module.exports = {
   styles: 'src/**/*.scss',
   stylesIncludePaths: [
     './src/styles',
+    './src/images',
     './node_modules/foundation-sites/scss'
   ],
   typescript: 'src/**/*.ts',
