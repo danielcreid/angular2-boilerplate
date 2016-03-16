@@ -3,13 +3,6 @@
 
 @import 'utils';
 @import 'colors';
-@import 'foundation-settings';
-@import 'foundation';
-
-@import 'typography';
-@import 'icons';
-
-@include foundation-everything($flex: true);
 
 body {
   background-color: get-color(magenta, 100);
