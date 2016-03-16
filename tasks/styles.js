@@ -1,6 +1,6 @@
 'use strict';
 
-var config = require('./config').client;
+var config = require('./config');
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
@@ -12,10 +12,7 @@ module.exports = function(callback) {
       .pipe(sass.sync({
         outputStyle: 'expanded',
         errLogToConsole: true,
-        includePaths: [
-          './src/styles',
-          './node_modules/foundation-sites/scss'
-        ]
+        includePaths: config.stylesIncludePaths
       }).on('error', sass.logError))
       .pipe(autoprefixer(config.autoprefixer))
       .pipe(gulp.dest(config.destination))

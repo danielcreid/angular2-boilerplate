@@ -11,7 +11,7 @@
     "rootDir": "./src"
   },
   "filesGlob": [
-    "src/**/*.ts"
+    "./src/**/*.ts"
   ],
   "exclude": [
     "node_modules",

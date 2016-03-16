@@ -9,20 +9,30 @@
   <title>Angular 2 Webpack</title>
   <link rel="icon" type="image/x-icon" href="angular.ico"/>
 
-  <link rel="stylesheet" href="styles/boot.css">
-
-  <script src="node_modules/es6-shim.min.js"></script>
-  <script src="node_modules/system-polyfills.js"></script>
-  <script src="node_modules/shims_for_IE.js"></script>
-
-  <script src="node_modules/angular2-polyfills.js"></script>
-  <script src="node_modules/system.src.js"></script>
-  <script src="node_modules/Rx.js"></script>
-  <script src="node_modules/angular2.dev.js"></script>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <app></app>
 
-  <script src="boot.js"></script>
+  <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+  <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+  <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+  <script>
+      System.config({
+        packages: {
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('boot.js')
+            .then(null, console.error.bind(console));
+    </script>
 </body>
 </html>

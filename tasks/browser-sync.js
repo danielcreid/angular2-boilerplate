@@ -1,6 +1,6 @@
 'use strict';
 
-var config = require('./config').client;
+var config = require('./config');
 
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
@@ -11,7 +11,7 @@ module.exports = function() {
       server: {
         baseDir: './' + config.destination
       },
-      reloadDelay: 500
+      reloadDelay: 200
     });
   };
 };
